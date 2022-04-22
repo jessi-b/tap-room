@@ -20,6 +20,19 @@ function BeverageInventory(props){
           key={beverage.id}
         />
       )}
+      {props.beverageInventory.map((beverage) =>
+        <InventoryRecon
+          onSelectBeverage = {props.onSelectBeverage}
+          name={beverage.name}
+          description={beverage.description}
+          company={beverage.description}
+          cost={beverage.cost}
+          inventory={beverage.inventory}
+          price={beverage.price}
+          id={beverage.id}
+          key={beverage.id}
+        />
+      )}
     </React.Fragment>
   );
 }

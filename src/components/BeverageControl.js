@@ -5,16 +5,20 @@ import BeverageInventory from './BeverageInventory';
 import BeverageDetails from './BeverageDetails';
 import CreateBeverage from './CreateBeverage';
 import UpdateBeverage from './UpdateBeverage';
+import SubtractPint from './SubtractPint';
 
 class BeverageControl extends React.Component {
   // constructor
   constructor(props) {
     super(props);
     this.state = {
-      formDisplayed: false,
       beverageInventory: [],
+      formDisplayed: false,
+      menuDisplayed: false,
+      inventoryRecon: false,
       selectedBeverage: null,
-      updating: false
+      updateDetails: false,
+      inventoryCount: ""
     };
   }
 
@@ -24,7 +28,7 @@ class BeverageControl extends React.Component {
       this.setState({
         formDisplayed: false,
         selectedBeverage: null,
-        updating: false
+        updateDetails: false
       });
     } else {
       this.setState(prevState => ({
@@ -55,18 +59,21 @@ class BeverageControl extends React.Component {
   handleUpdateBeverage = () => {
     console.log("handleUpdateBeverage reached!");
     this.setState({
-      updating: true
+      updateDetails: true
     });
   }
-  handleUpdateBeverageInventory = (beverageUpdating) => {
+  handleUpdateBeverageInventory = (beverageUpdateDetails) => {
     const updateBeverageInventory = this.state.beverageInventory
       .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
-      .concat(beverageUpdating);
+      .concat(beverageUpdateDetails);
     this.setState({
       beverageInventory: updateBeverageInventory,
-      updating: false,
+      updateDetails: false,
       selectedBeverage: null
     });
+  }
+  handleSubtractPint = (selectBevInventory) => {
+    
   }
   
   // render method
@@ -74,7 +81,7 @@ class BeverageControl extends React.Component {
     let currentlyDisplayedState = null;
     let button1 = null; 
     let button2 = null;
-    if (this.state.updating ) {      
+    if (this.state.updateDetails ) {      
       currentlyDisplayedState = <UpdateBeverage beverage = {this.state.selectedBeverage} onUpdateBeverage = {this.handleUpdateBeverageInventory}/>
       button1 = "Menu";
       button2 = "Inventory";
@@ -92,6 +99,7 @@ class BeverageControl extends React.Component {
       button2 = "Inventory";
     } else {
       currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} onSelectBeverage={this.handleSelectingBeverage} />;
+      <SubtractPint inventoryCount={this.state.inventoryCount} decreaseCount={(inventoryCount) => this.setState({inventoryCount})}/>
       button1 = "Add Beverage";
       // button2 = "Manage Inventory";
     }

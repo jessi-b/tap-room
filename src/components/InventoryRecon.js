@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function InventoryRecon(props){  // using properties from parent BeverageList
+function InventoryRecon(props){
+  // const AddKeg = ({count, increaseCount}) => {
   return (
     <React.Fragment>
-      {/* onclick goes to beverage details */}
+      <h2>INVENTORY</h2>
       <div onClick = {() => props.whenBeverageClicked(props.id)}> 
         <h3>{props.name}  {props.inventory}keg(s)</h3>
-        {/* button to add keg */}
+        {/* <button onClick={() => increaseCount(count + 124)}>+</button> */}
         <hr/>
         {/* button to return to menu */}
       </div>
