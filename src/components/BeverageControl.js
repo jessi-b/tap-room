@@ -1,7 +1,6 @@
 import React from 'react';
 import BeverageInventory from './BeverageInventory';
 import BeverageMenu from './BeverageMenu';
-import InventoryRecon from './InventoryRecon';
 import BeverageDetails from './BeverageDetails';
 import CreateBeverage from './CreateBeverage';
 import UpdateBeverage from './UpdateBeverage';
@@ -14,11 +13,10 @@ class BeverageControl extends React.Component {
     this.state = {
       beverageInventory: [],
       formDisplayed: false,
-      menuDisplayed: false,
-      inventoryRecon: false,
       selectedBeverage: null,
       updateDetails: false,
       pintCount: ""
+
     };
   }
 
