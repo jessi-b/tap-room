@@ -8,7 +8,7 @@ function BeverageInventory(props){
     <React.Fragment>
       <hr/>
       {props.beverageInventory.map((beverage) =>
-        <Beverage
+        <BeverageMenu
           whenBeverageClicked = {props.onBeverageSelection}
           name={beverage.name}
           description={beverage.description}

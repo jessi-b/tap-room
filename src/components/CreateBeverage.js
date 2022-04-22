@@ -6,9 +6,9 @@ import PropTypes from "prop-types";
 import Form from "./FormBase";
 
 function CreateBeverage(props) {
-  function handleCreateBeverageSubmission(event) {
+  function handleCreateBeverage(event) {
     event.preventDefault();
-    props.onNewTicketCreation({
+    props.onCreateBeverage({
       name: event.target.name.value, 
       description: event.target.description.value, 
       company: event.target.company.value, // stretch: add co contact & account details
@@ -22,14 +22,14 @@ function CreateBeverage(props) {
   return (
     <React.Fragment>
       <Form 
-        formSubmissionHandler={handleCreateBeverageSubmission}
+        formSubmissionHandler={handleCreateBeverage}
         buttonText="Submit" />
     </React.Fragment>
   );
 }
 
 CreateBeverage.propTypes = {
-  onNewTicketCreation: PropTypes.func
+  onCreateBeverage: PropTypes.func
 };
 
 export default CreateBeverage;

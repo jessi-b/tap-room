@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "./Header";
-import Control from "./Control";
+import BeverageControl from "./BeverageControl";
 
 function App(){
   return ( 
     <React.Fragment>
       <Header />
-      <Control />
+      <BeverageControl />
+      
     </React.Fragment>
   );
 }

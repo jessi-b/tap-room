@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function BeverageDeets(props){
+function BeverageDetails(props){
   const { beverage, onClickingDelete } = props;
   return (
     <React.Fragment>
@@ -19,10 +19,10 @@ function BeverageDeets(props){
   );
 }
 
-BeverageDeets.propTypes = {
+BeverageDetails.propTypes = {
   beverage: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingUpdate: PropTypes.func
 };
 
-export default BeverageDeets;
+export default BeverageDetails;
