@@ -72,9 +72,8 @@ class BeverageControl extends React.Component {
   // render method
   render(){
     let currentlyDisplayedState = null;
-    let buttonText = null; 
-    let button1 = null;
-    let button2 = null; 
+    let button1 = null; 
+    let button2 = null;
     if (this.state.updating ) {      
       currentlyDisplayedState = <UpdateBeverage beverage = {this.state.onBeverageSelection} onUpdateBeverage = {this.handleUpdateBeverageInventory}/>
       button1 = "Menu";
@@ -92,12 +91,13 @@ class BeverageControl extends React.Component {
       button1 = "Menu";
       button2 = "Inventory";
     } else if (this.state.formDisplayed) {
-      currentlyDisplayedState = <CreateBeverage onBeverageCreation={this.handleCreateBeverage} />
+      currentlyDisplayedState = <CreateBeverage onCreateBeverage={this.handleCreateBeverage} />
       button1 = "Menu";
       button2 = "Inventory";
     } else {
       currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} onTicketSelection={this.handleSelectingBeverage} />;
-      button1 = "New Beverage";
+      button1 = "Add Beverage";
+      // button2 = "Manage Inventory";
     }
     return (
       <React.Fragment>
