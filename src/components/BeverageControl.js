@@ -97,36 +97,31 @@ class BeverageControl extends React.Component {
   // render method
   render(){
     let currentlyDisplayedState = null;
-    let button1 = null; 
-    let button2 = null;
+    let buttonText = null;
     if (this.state.updateDetails ) {      
       currentlyDisplayedState = <UpdateBeverage beverage = {this.state.selectedBeverage} onUpdateBeverage = {this.handleUpdateBeverageInventory}/>
-      button1 = "Menu";
-      button2 = "Inventory";
+      buttonText = "Return to Menu";
     } else if (this.state.selectedBeverage != null) {
       currentlyDisplayedState = <BeverageDetails 
         beverage = {this.state.selectedBeverage} 
         onClickingDelete = {this.handleDeleteBeverage} 
         onClickingUpdate = {this.handleUpdateBeverage}
       />
-      button1 = "Menu";
-      button2 = "Inventory"; 
+      buttonText = "Return to Menu";
     } else if (this.state.formDisplayed) {
       currentlyDisplayedState = <CreateBeverage onCreateBeverage={this.handleCreateBeverage} />
-      button1 = "Menu";
-      button2 = "Inventory";
+      buttonText = "Return to Menu";
     } else {
       currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} 
       onSelectBeverage={this.handleSelectingBeverage} />;
       // <SubtractPint inventoryCount={this.state.inventoryCount} decreaseCount={(inventoryCount) => this.setState({inventoryCount})}/>
-      button1 = "Add Beverage";
+      buttonText = "Add Beverage";
       // button2 = "Manage Inventory";
     }
     return (
       <React.Fragment>
         {currentlyDisplayedState}
-        <button onClick={this.handleClick}>{button1}</button> 
-        <button onClick={this.handleClick}>{button2}</button> 
+        <button onClick={this.handleClick}>{buttonText}</button> 
       </React.Fragment>
     );
   }

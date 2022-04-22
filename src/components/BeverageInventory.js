@@ -11,7 +11,7 @@ function BeverageInventory(props){
           onSelectBeverage = {props.onSelectBeverage}
           name={beverage.name}
           description={beverage.description}
-          inventory={beverage.inventory}
+          quantity={beverage.quantity}
           price={beverage.price}
           id={beverage.id}
           key={beverage.id}

@@ -1,9 +1,17 @@
-import React from 'react';
+// import React from "react";
 
-const SubtractPint = ({count, decreaseCount}) => {
-  return(
-    <button onClick={() => decreaseCount(count - 1)}>-</button>
-  )
-}
+// function SubtractPint(){
+//   return (
+//     <div>
+//       // jsx code goes here
+//     </div>
+//   );
+// }
 
-export default SubtractPint;
+// export default ThisIsaFunctionalComponent;
+
+// const SubtractPint = ({count, decreaseCount}) => {
+//   return(
+//     <button onClick={() => decreaseCount(count - 1)}>-</button>
+//   )
+// }

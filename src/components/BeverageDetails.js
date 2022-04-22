@@ -7,8 +7,8 @@ function BeverageDetails(props){ //
     <React.Fragment> {/**/}
       <h3>{beverage.name}</h3>
       <p><em>{beverage.description}</em></p>
-      <p>$ {beverage.price} /pint</p>
-      <p>{beverage.inventory} keg(s)  {(beverage.inventory)-124} pints(s)</p>
+      <p>{"$"+(beverage.price)+"/pint"}</p>
+      <p>{(beverage.quantity)+" keg(s)"} // {((beverage.quantity)*124)+" pints(s)"}</p>
       <br/>
       <button onClick={props.onClickingUpdate}>Update Details</button>
       <button onClick={()=> onClickingDelete(beverage.id) }>Delete</button>

@@ -14,8 +14,8 @@ function Form(props) {
           placeholder='Description' />
         <input
           type="number"
-          name='inventory'
-          placeholder='Inventory (keg/s)' />
+          name='quantity'
+          placeholder='Quantity (keg/s)' />
         <input
           type="number"
           name='price'
