@@ -11,10 +11,10 @@ function BeverageInventory(props){
         <Beverage
           whenBeverageClicked = {props.onBeverageSelection}
           name={beverage.name}
+          description={beverage.description}
           company={beverage.description}
           cost={beverage.cost}
           inventory={beverage.inventory}
-          description={beverage.description}
           price={beverage.price}
           id={beverage.id}
           key={beverage.id}

@@ -13,6 +13,8 @@ function BeverageDeets(props){
       <br/>
       <button onClick={props.onClickingUpdate}>Update Details</button>
       <button onClick={()=> onClickingDelete(beverage.id) }>Delete</button>
+      {/* button to menu */}
+      {/* button to inventoryrecon. */}
     </React.Fragment>
   );
 }
