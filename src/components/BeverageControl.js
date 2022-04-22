@@ -13,17 +13,17 @@ class BeverageControl extends React.Component {
     this.state = {
       formDisplayed: false,
       beverageInventory: [],
-      onBeverageSelection: null,
+      onSelectBeverage: null,
       updating: false
     };
   }
 
   // event handler methods
   handleClick = () => {
-    if (this.state.onBeverageSelection != null) {
+    if (this.state.onSelectBeverage != null) {
       this.setState({
         formDisplayed: false,
-        onBeverageSelection: null,
+        onSelectBeverage: null,
         updating: false
       });
     } else {
@@ -40,16 +40,16 @@ class BeverageControl extends React.Component {
     });
   }
   handleSelectingBeverage = (id) => { 
-    const onBeverageSelection = this.state.beverageInventory.filter(beverage => beverage.id === id)[0];
+    const onSelectBeverage = this.state.beverageInventory.filter(beverage => beverage.id === id)[0];
     this.setState({
-      onBeverageSelection: onBeverageSelection
+      onSelectBeverage: onSelectBeverage
     });
   }
   handleDeleteBeverage = (id) => {
     const newBeverageInventory = this.state.beverageInventory.filter(beverage => beverage.id !== id);
     this.setState({
       beverageInventory: newBeverageInventory,
-      onBeverageSelection: null
+      onSelectBeverage: null
     });
   }
   handleUpdateBeverage = () => {
@@ -58,14 +58,14 @@ class BeverageControl extends React.Component {
       updating: true
     });
   }
-  handleUpdateBeverageInventory = (onBeverageSelection) => {
+  handleUpdateBeverageInventory = (onSelectBeverage) => {
     const updateBeverageInventory = this.state.beverageInventory
-      .filter(beverage => beverage.id !== this.state.onBeverageSelection.id)
-      .concat(onBeverageSelection);
+      .filter(beverage => beverage.id !== this.state.onSelectBeverage.id)
+      .concat(onSelectBeverage);
     this.setState({
       beverageInventory: updateBeverageInventory,
       updating: false,
-      onBeverageSelection: null
+      onSelectBeverage: null
     });
   }
   
@@ -75,19 +75,19 @@ class BeverageControl extends React.Component {
     let button1 = null; 
     let button2 = null;
     if (this.state.updating ) {      
-      currentlyDisplayedState = <UpdateBeverage beverage = {this.state.onBeverageSelection} onUpdateBeverage = {this.handleUpdateBeverageInventory}/>
+      currentlyDisplayedState = <UpdateBeverage beverage = {this.state.onSelectBeverage} onUpdateBeverage = {this.handleUpdateBeverageInventory}/>
       button1 = "Menu";
       button2 = "Inventory";
-    } else if (this.state.onBeverageSelection != null) {
+    } else if (this.state.onSelectBeverage != null) {
       currentlyDisplayedState = <BeverageDetails 
-        beverage = {this.state.onBeverageSelection} 
+        beverage = {this.state.onSelectBeverage} 
         onClickingDelete = {this.handleDeleteBeverage} 
         onClickingUpdate = {this.handleUpdateBeverage}
       />
       button1 = "Menu";
       button2 = "Inventory"; 
-    } else if (this.state.onBeverageSelection != null) {
-      currentlyDisplayedState = <BeverageDetails beverage = {this.state.onBeverageSelection} />
+    } else if (this.state.onSelectBeverage != null) {
+      currentlyDisplayedState = <BeverageDetails beverage = {this.state.onSelectBeverage} />
       button1 = "Menu";
       button2 = "Inventory";
     } else if (this.state.formDisplayed) {
@@ -95,7 +95,7 @@ class BeverageControl extends React.Component {
       button1 = "Menu";
       button2 = "Inventory";
     } else {
-      currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} onTicketSelection={this.handleSelectingBeverage} />;
+      currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} onSelectBeverage={this.handleSelectingBeverage} />;
       button1 = "Add Beverage";
       // button2 = "Manage Inventory";
     }

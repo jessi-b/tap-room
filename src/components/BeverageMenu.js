@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import BeverageDetails from "./BeverageDetails";
 
 function BeverageMenu(props){  // using properties from parent BeverageList
   return (
     <React.Fragment>
       {/* onclick goes to beverage details */}
-      <div onClick = {() => props.whenBeverageClicked(props.id)}> 
+      <div onClick = {() => props.onSelectBeverage(props.id)}> 
         <h3>{props.name}  $ {props.price}</h3>
         <p><em>{props.description}</em></p>
         {/* button to "sell" pint */}
@@ -21,7 +22,7 @@ BeverageMenu.propTypes = {
   price: PropTypes.string,
   description: PropTypes.string,
   id: PropTypes.string,
-  whenBeverageClicked: PropTypes.func 
+  onSelectBeverage: PropTypes.func 
 };
 
 export default BeverageMenu;
