@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react"; //
 import PropTypes from "prop-types";
 
-function BeverageDetails(props){
+function BeverageDetails(props){ //
   const { beverage, onClickingDelete } = props;
-  return (
-    <React.Fragment>
+  return ( //
+    <React.Fragment> {/**/}
       <h3>{beverage.name}</h3>
       <p>{beverage.company}</p>
       <p>{beverage.cost}</p>
@@ -25,4 +25,4 @@ BeverageDetails.propTypes = {
   onClickingUpdate: PropTypes.func
 };
 
-export default BeverageDetails;
+export default BeverageDetails; //

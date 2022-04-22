@@ -8,7 +8,7 @@ function Form(props) {
         <input
           type='text'
           name='name'
-          placeholder='Names' />
+          placeholder='Beverage' />
         <textarea
           name='description'
           placeholder='Description' />

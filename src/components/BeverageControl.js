@@ -13,17 +13,17 @@ class BeverageControl extends React.Component {
     this.state = {
       formDisplayed: false,
       beverageInventory: [],
-      onSelectBeverage: null,
+      selectedBeverage: null,
       updating: false
     };
   }
 
   // event handler methods
   handleClick = () => {
-    if (this.state.onSelectBeverage != null) {
+    if (this.state.selectedBeverage != null) {
       this.setState({
         formDisplayed: false,
-        onSelectBeverage: null,
+        selectedBeverage: null,
         updating: false
       });
     } else {
@@ -40,16 +40,16 @@ class BeverageControl extends React.Component {
     });
   }
   handleSelectingBeverage = (id) => { 
-    const onSelectBeverage = this.state.beverageInventory.filter(beverage => beverage.id === id)[0];
+    const selectedBeverage = this.state.beverageInventory.filter(beverage => beverage.id === id)[0];
     this.setState({
-      onSelectBeverage: onSelectBeverage
+      selectedBeverage: selectedBeverage
     });
   }
   handleDeleteBeverage = (id) => {
     const newBeverageInventory = this.state.beverageInventory.filter(beverage => beverage.id !== id);
     this.setState({
       beverageInventory: newBeverageInventory,
-      onSelectBeverage: null
+      selectedBeverage: null
     });
   }
   handleUpdateBeverage = () => {
@@ -78,18 +78,14 @@ class BeverageControl extends React.Component {
       currentlyDisplayedState = <UpdateBeverage beverage = {this.state.onSelectBeverage} onUpdateBeverage = {this.handleUpdateBeverageInventory}/>
       button1 = "Menu";
       button2 = "Inventory";
-    } else if (this.state.onSelectBeverage != null) {
+    } else if (this.state.selectedBeverage != null) {
       currentlyDisplayedState = <BeverageDetails 
-        beverage = {this.state.onSelectBeverage} 
+        beverage = {this.state.selectedBeverage} 
         onClickingDelete = {this.handleDeleteBeverage} 
         onClickingUpdate = {this.handleUpdateBeverage}
       />
       button1 = "Menu";
       button2 = "Inventory"; 
-    } else if (this.state.onSelectBeverage != null) {
-      currentlyDisplayedState = <BeverageDetails beverage = {this.state.onSelectBeverage} />
-      button1 = "Menu";
-      button2 = "Inventory";
     } else if (this.state.formDisplayed) {
       currentlyDisplayedState = <CreateBeverage onCreateBeverage={this.handleCreateBeverage} />
       button1 = "Menu";

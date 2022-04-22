@@ -9,7 +9,7 @@ function BeverageInventory(props){
       <hr/>
       {props.beverageInventory.map((beverage) =>
         <BeverageMenu
-          whenBeverageClicked = {props.onBeverageSelection}
+          onSelectBeverage = {props.onSelectBeverage}
           name={beverage.name}
           description={beverage.description}
           company={beverage.description}
@@ -26,7 +26,7 @@ function BeverageInventory(props){
 
 BeverageInventory.propTypes = {
   beverageInventory: PropTypes.array,
-  onBeverageSelection: PropTypes.func
+  onSelectBeverage: PropTypes.func
 };
 
 export default BeverageInventory;
