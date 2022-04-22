@@ -10,7 +10,9 @@
   <small>April 2022</small>
 </p>
 ------------------------------
-![image](/plan.png)
+
+![image](./plan.png)
+
 ------------------------------
 ### <u>Table of Contents</u>
 * <a href="#-description">Description</a>
