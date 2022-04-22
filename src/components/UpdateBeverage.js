@@ -3,21 +3,19 @@ import Form from "./FormBase";
 import PropTypes from "prop-types";
 
 function UpdateBeverage(props){
-  const { beverage } = props;
-
+  const {beverage} = props;
   function handleUpdateBeverageSubmission(event) {
     event.preventDefault();
-    props.onUpdateTicket({
+    props.onUpdateBeverage ({
       name: event.target.name.value, 
       description: event.target.description.value, 
       company: event.target.company.value, 
       cost: event.target.cost.value, 
       inventory: event.target.inventory.value, 
       price: event.target.price.value, 
-      id: beverage.id()
+      id: beverage.id
     });
   }
-
   return (
     <React.Fragment>
       <Form 
@@ -29,7 +27,7 @@ function UpdateBeverage(props){
 
 UpdateBeverage.propTypes = {
   beverage: PropTypes.object,
-  onUpdateTicket: PropTypes.func
+  onUpdateBeverage: PropTypes.func
 };
 
 export default UpdateBeverage;
