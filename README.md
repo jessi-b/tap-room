@@ -1,6 +1,58 @@
-# Getting Started with Create React App
+<p align="center">
+  <u><big>|| <b>Tap Room</b> ||</big></u>
+  <br>
+  <em>Epicodus - React - React Fundamentals - Code Review</em>
+  <br>
+  ___________________________
+  <br>
+  <strong>Jessi B</strong>
+  <br>
+  <small>April 2022</small>
+</p>
+------------------------------
+![image](/plan.png)
+------------------------------
+### <u>Table of Contents</u>
+* <a href="#-description">Description</a>
+* <a href="#-technologies-used">Technologies Used</a>
+* <a href="#-setup-&-installation">Setup & Installation</a>
+* <a href="#-known-bugs">Known Bugs</a>
+* <a href="#-contact">Contact</a>
+* <a href="#-license">License</a>
+------------------------------
+### Description
+This React app allows a user to track their kegs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
+As a user, I want to submit a form to add a new keg to a list.
+As a user, I want to be able to click on a keg to see its detail page.
+As a user, I want to see how many pints are left in a keg. Hint: A full keg has roughly 124 pints.
+As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
+#
+### Technologies Used
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [React](https://reactjs.org/docs/getting-started.html)
+* Javascript
+* JSX
+* HTML
+#
+### Setup & Installation
+* Clone Repo: In your terminal, navigate to your desktop or other desired location and enter `git clone https://github.com/jessi-b/tap-room.git`
+* Add Required Packages: Navigate to the top level of the project directory called _tap-room_ & enter each of the 
+* Try Out This Web App: Enter `npm start` in the command line and navigte to _http://localhost:3000/_ in your browser
+```
+#
+### Known Bugs
+No known bugs.
+#
+### License
+Copyright (c)  _Apr 2022_  _Jessi B_
+#
+### Contact
+_If you run into any issues or have questions, ideas or concerns or wish to make a contribution to the code see contact information below._
+* Jessi B <jessb.dev@gmail.com>
+------------------------------
+<center><a href="#">Return to Top</a></center>
 
 ## Available Scripts
 
@@ -68,3 +120,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+<center><a href="#">Return to Top</a></center>
