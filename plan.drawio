@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-04-22T16:20:58.637Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="S3GzysXdsUJmAjAmuKQO" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-22T16:30:46.665Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="hi3Hlf5DuUSS8aYgUmmE" version="17.4.6" type="github">
   <diagram id="eGEJDaj6SYlvqcA72SZF" name="Page-1">
-    <mxGraphModel dx="486" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1646" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -14,10 +14,13 @@
           <mxGeometry x="175" y="140" width="215" height="40" as="geometry" />
         </mxCell>
         <mxCell id="y5f6hxjgZu6ScxN4eYrp-5" value="Beverage Details&lt;br&gt;(Displays beverage details;&lt;br&gt;Allows user to update inventory by the keg)" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="142.5" y="280" width="280" height="60" as="geometry" />
+          <mxGeometry x="140" y="300" width="280" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="y5f6hxjgZu6ScxN4eYrp-6" value="Beverage Menu&lt;br&gt;(Displays beverage name, description, price &amp;amp; availability;&lt;br&gt;Clicking beverage displays that beverages details;&lt;br&gt;Can &quot;sell&quot;/subtract by the pint;&lt;br&gt;User can add new beverage products w/ button)" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
-          <mxGeometry x="116.25" y="190" width="332.5" height="80" as="geometry" />
+        <mxCell id="y5f6hxjgZu6ScxN4eYrp-6" value="Beverage Menu&lt;br&gt;(Displays beverage, if &amp;gt; 0, name, description, price;&lt;br&gt;Clicking beverage displays that beverages details;&lt;br&gt;Can &quot;sell&quot;/subtract by the pint;&lt;br&gt;User can update inventory w/ button)" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="-50" y="190" width="332.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5Ynr9P_wDF0KFYhToqWw-2" value="Inventory Recon&lt;br&gt;(Displays all beverages by name &amp;amp; stock(keg);&lt;br&gt;Clicking beverage displays that beverages details;&lt;br&gt;Can &quot;add&quot;/subtract by the keg;&lt;br&gt;User can add new beverage products w/ button;&lt;br&gt;User can update inventory w/ button)" style="whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="290" y="190" width="332.5" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
