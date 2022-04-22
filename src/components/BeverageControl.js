@@ -15,8 +15,7 @@ class BeverageControl extends React.Component {
       formDisplayed: false,
       selectedBeverage: null,
       updateDetails: false,
-      pintCount: ""
-
+      updateQuantity: ""
     };
   }
 
@@ -70,26 +69,21 @@ class BeverageControl extends React.Component {
       selectedBeverage: null
     });
   }
-  handlePintClick = () => {
-
-  }
   handleSubtractPint = (beveragePintCount) => {
-    const updatePintCount = this.state.pintCount
+    const updatePintCount = this.state.pndateQuantity
     .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
     .concat(beveragePintCount)
     this.setState({
       pintCount: updatePintCount,
-      updateDetails: true,
       selectedBeverage: null
     });
   }
   handleAddKeg = (beverageKegCount) => {
-    const updateKegCount = this.state.kegCount
+    const updateKegCount = this.state.updateQuantity
     .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
     .concat(beverageKegCount)
     this.setState({
       kegCount: updateKegCount,
-      updateDetails: true,
       selectedBeverage: null
     });
   }
@@ -99,13 +93,14 @@ class BeverageControl extends React.Component {
     let currentlyDisplayedState = null;
     let buttonText = null;
     if (this.state.updateDetails ) {      
-      currentlyDisplayedState = <UpdateBeverage beverage = {this.state.selectedBeverage} onUpdateBeverage = {this.handleUpdateBeverageInventory}/>
+      currentlyDisplayedState = <UpdateBeverage beverage = {this.state.selectedBeverage} 
+        onUpdateBeverage = {this.handleUpdateBeverageInventory}/>
       buttonText = "Return to Menu";
     } else if (this.state.selectedBeverage != null) {
       currentlyDisplayedState = <BeverageDetails 
         beverage = {this.state.selectedBeverage} 
-        onClickingDelete = {this.handleDeleteBeverage} 
-        onClickingUpdate = {this.handleUpdateBeverage}
+        onClickDelete = {this.handleDeleteBeverage} 
+        onClickUpdate = {this.handleUpdateBeverage}
       />
       buttonText = "Return to Menu";
     } else if (this.state.formDisplayed) {
@@ -113,9 +108,13 @@ class BeverageControl extends React.Component {
       buttonText = "Return to Menu";
     } else {
       currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} 
-      onSelectBeverage={this.handleSelectingBeverage} />;
+        onSelectBeverage={this.handleSelectingBeverage}
+        onClickAdd = {this.handleAddKeg} 
+        onClickSubtract = {this.handleSubtractKeg}
+      />;
       // <SubtractPint inventoryCount={this.state.inventoryCount} decreaseCount={(inventoryCount) => this.setState({inventoryCount})}/>
       buttonText = "Add Beverage";
+      
       // button2 = "Manage Inventory";
     }
     return (

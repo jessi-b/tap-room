@@ -14,10 +14,18 @@ function Form(props) {
           placeholder='Description' />
         <input
           type="number"
+          inputProps={{
+            'min': 0,
+            'max': 99
+          }}
           name='quantity'
           placeholder='Quantity (keg/s)' />
         <input
           type="number"
+          inputProps={{
+            'min': 0,
+            'max': 99
+          }}
           name='price'
           placeholder='Sale Price $/pint' />
         <button type='submit'>{props.buttonText}</button>
