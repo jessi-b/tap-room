@@ -1,7 +1,7 @@
 import React from 'react';
 import BeverageInventory from './BeverageInventory';
-// import BeverageMenu from './BeverageMenu';
-// import InventoryRecon from './InventoryRecon';
+import BeverageMenu from './BeverageMenu';
+import InventoryRecon from './InventoryRecon';
 import BeverageDetails from './BeverageDetails';
 import CreateBeverage from './CreateBeverage';
 import UpdateBeverage from './UpdateBeverage';
@@ -18,7 +18,7 @@ class BeverageControl extends React.Component {
       inventoryRecon: false,
       selectedBeverage: null,
       updateDetails: false,
-      inventoryCount: ""
+      pintCount: ""
     };
   }
 
@@ -72,8 +72,18 @@ class BeverageControl extends React.Component {
       selectedBeverage: null
     });
   }
-  handleSubtractPint = (selectBevInventory) => {
-    
+  handlePintClick = () => {
+
+  }
+  handleSubtractPint = (beveragePintCount) => {
+    const updatePintCount = this.state.pintCount
+    .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
+    .concat(beveragePintCount)
+    this.setState({
+      pintCount: updatePintCount,
+      updateDetails: true,
+      selectedBeverage: null
+    });
   }
   
   // render method
@@ -98,8 +108,9 @@ class BeverageControl extends React.Component {
       button1 = "Menu";
       button2 = "Inventory";
     } else {
-      currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} onSelectBeverage={this.handleSelectingBeverage} />;
-      <SubtractPint inventoryCount={this.state.inventoryCount} decreaseCount={(inventoryCount) => this.setState({inventoryCount})}/>
+      currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} 
+      onSelectBeverage={this.handleSelectingBeverage} />;
+      // <SubtractPint inventoryCount={this.state.inventoryCount} decreaseCount={(inventoryCount) => this.setState({inventoryCount})}/>
       button1 = "Add Beverage";
       // button2 = "Manage Inventory";
     }
