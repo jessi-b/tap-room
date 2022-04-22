@@ -9,8 +9,6 @@ function UpdateBeverage(props){
     props.onUpdateBeverage ({
       name: event.target.name.value, 
       description: event.target.description.value, 
-      company: event.target.company.value, 
-      cost: event.target.cost.value, 
       inventory: event.target.inventory.value, 
       price: event.target.price.value, 
       id: beverage.id

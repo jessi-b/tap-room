@@ -11,8 +11,6 @@ function CreateBeverage(props) {
     props.onCreateBeverage({
       name: event.target.name.value, 
       description: event.target.description.value, 
-      company: event.target.company.value, // stretch: add co contact & account details
-      cost: event.target.cost.value, 
       inventory: event.target.inventory.value, 
       price: event.target.price.value, 
       id: v4()

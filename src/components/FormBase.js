@@ -13,14 +13,6 @@ function Form(props) {
           name='description'
           placeholder='Description' />
         <input
-          type='text'
-          name='company'
-          placeholder='Company' />
-        <input
-          type="number"
-          name='cost'
-          placeholder='Cost $/keg' />
-        <input
           type="number"
           name='inventory'
           placeholder='Inventory (keg/s)' />

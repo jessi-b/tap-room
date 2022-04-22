@@ -9,7 +9,11 @@ function BeverageMenu(props){  // using properties from parent BeverageList
       <div onClick = {() => props.onSelectBeverage(props.id)}> 
         <h3>{props.name}  $ {props.price}</h3>
         <p><em>{props.description}</em></p>
-        {/* button to "sell" pint */}
+        <p>
+          {props.inventory}
+          {/* button to subtract pint */}
+          {/* button to add keg */}
+          </p>
         <hr/>
       </div>
     </React.Fragment>
@@ -18,8 +22,9 @@ function BeverageMenu(props){  // using properties from parent BeverageList
 
 BeverageMenu.propTypes = {
   name: PropTypes.string,
-  price: PropTypes.string,
+  price: PropTypes.number,
   description: PropTypes.string,
+  inventory: PropTypes.number,
   id: PropTypes.string,
   onSelectBeverage: PropTypes.func 
 };

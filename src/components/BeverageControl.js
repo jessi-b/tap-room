@@ -85,6 +85,16 @@ class BeverageControl extends React.Component {
       selectedBeverage: null
     });
   }
+  handleAddKeg = (beverageKegCount) => {
+    const updateKegCount = this.state.kegCount
+    .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
+    .concat(beverageKegCount)
+    this.setState({
+      kegCount: updateKegCount,
+      updateDetails: true,
+      selectedBeverage: null
+    });
+  }
   
   // render method
   render(){
