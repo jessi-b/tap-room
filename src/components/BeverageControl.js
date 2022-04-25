@@ -42,7 +42,7 @@ class BeverageControl extends React.Component {
     });
   }
   handleSellPint = (quantity) => {
-    const updateBeverageInventory = this.state.updateBeverageInventory.filter(beverage => beverage.quantity)
+    const updateBeverageInventory = this.state.updateBeverageInventory.filter(beverage => (beverage.quantity * 124)-1)
     this.setState({
       beverageInventory : updateBeverageInventory
     })

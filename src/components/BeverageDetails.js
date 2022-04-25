@@ -1,4 +1,4 @@
-import React from "react"; //
+import React from "react";
 import PropTypes from "prop-types";
 
 function BeverageDetails(props){ 
@@ -8,16 +8,14 @@ function BeverageDetails(props){
       <h3>{beverage.name}</h3>
       <p><em>{beverage.description}</em></p>
       <p>{"$"+(beverage.price)+"/pint"}</p>
-      <p>{(beverage.quantity)+" keg(s)"} // {((beverage.quantity)*124)+" pints(s)"}</p>
+      <p>{(beverage.quantity)+" keg(s)"} || {((beverage.quantity)*124)+" pints(s)"}</p>
       <br/>
     </React.Fragment>
   );
 }
 
 BeverageDetails.propTypes = {
-  beverage: PropTypes.object,
-  onClickDelete: PropTypes.func,
-  onClickUpdate: PropTypes.func
+  beverage: PropTypes.object
 };
 
 export default BeverageDetails;

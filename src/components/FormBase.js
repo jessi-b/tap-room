@@ -27,7 +27,7 @@ function Form(props) {
             'max': 99
           }}
           name='price'
-          placeholder='Sale Price $/pint' />
+          placeholder='$/pint' />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
