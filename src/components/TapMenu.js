@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function TapMenu(props){ 
-  const {onClickSell} = props;
+  const { onClickSell} = props;
   return (
     <React.Fragment>
       <div onClick = {() => props.onSelectTap(props.id)}> 
@@ -10,13 +10,7 @@ function TapMenu(props){
       </div>
       <p><em>{props.description}</em></p>
       <p>{(props.quantity)*124 + " pints available"}</p>
-      <p>
-      {/* <div onClick = {() => props.onClickSell(props.id)}> 
-        <p>Sell Pint</p>
-      </div> */}
-        <button onClick={()=> onClickSell()}>Sell Pint</button>
-        {/* <button onClick={() => props.onClickSell(props.quantity)}>Sell Pint</button> */}
-        </p>
+      <button onClick={()=> onClickSell(props.id)}>Sell Pint</button>
       <hr/>
 
     </React.Fragment>
