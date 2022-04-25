@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function BeverageMenu(props){ 
+function TapMenu(props){ 
   const {onClickSell} = props;
   return (
     <React.Fragment>
-      <div onClick = {() => props.onSelectBeverage(props.id)}> 
+      <div onClick = {() => props.onSelectTap(props.id)}> 
         <h3>{props.name}  {"$"+(props.price)}</h3>
       </div>
       <p><em>{props.description}</em></p>
@@ -23,15 +23,15 @@ function BeverageMenu(props){
   );
 }
 
-BeverageMenu.propTypes = {
+TapMenu.propTypes = {
   name: PropTypes.string,
   price: PropTypes.string,
   description: PropTypes.string,
   quantity: PropTypes.string,
   id: PropTypes.string,
-  onSelectBeverage: PropTypes.func,
+  onSelectTap: PropTypes.func,
   onClick: PropTypes.func,
   onClickSell: PropTypes.func
 };
 
-export default BeverageMenu;
+export default TapMenu;

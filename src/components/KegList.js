@@ -1,0 +1,29 @@
+import React from 'react';
+import TapMenu from './TapMenu';
+import PropTypes from "prop-types";
+
+function KegList(props){
+  return (
+    <React.Fragment>
+      <hr/>
+      {props.kegList.map((keg) =>
+        <TapMenu
+          onSelectTap = {props.onSelectTap}
+          name={keg.name}
+          description={keg.description}
+          quantity={keg.quantity}
+          price={keg.price}
+          id={keg.id}
+          key={keg.id}
+        />
+      )}
+    </React.Fragment>
+  );
+}
+
+KegList.propTypes = {
+  kegList: PropTypes.array,
+  onSelectTap: PropTypes.func
+};
+
+export default KegList;

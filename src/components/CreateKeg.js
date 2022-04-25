@@ -1,14 +1,12 @@
-// parent component for CreateBeverage.js and TicketList.js
-// function-based
 import React from "react";
 import { v4 } from 'uuid';
 import PropTypes from "prop-types";
 import Form from "./FormBase";
 
-function CreateBeverage(props) {
-  function handleCreateBeverage(event) {
+function CreateKeg(props) {
+  function handleCreateKeg(event) {
     event.preventDefault();
-    props.onCreateBeverage({
+    props.onCreateKeg({
       name: event.target.name.value, 
       description: event.target.description.value, 
       quantity: event.target.quantity.value, 
@@ -20,14 +18,14 @@ function CreateBeverage(props) {
   return (
     <React.Fragment>
       <Form 
-        formSubmissionHandler={handleCreateBeverage}
+        formSubmissionHandler={handleCreateKeg}
         buttonText="Submit" />
     </React.Fragment>
   );
 }
 
-CreateBeverage.propTypes = {
-  onCreateBeverage: PropTypes.func
+CreateKeg.propTypes = {
+  onCreateKeg: PropTypes.func
 };
 
-export default CreateBeverage;
+export default CreateKeg;
