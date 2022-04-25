@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function BeverageMenu(props){ 
-  const { onClickSell } = props;
   return (
     <React.Fragment>
       <div onClick = {() => props.onSelectBeverage(props.id)}> 
@@ -11,7 +10,11 @@ function BeverageMenu(props){
       <p><em>{props.description}</em></p>
       <p>{(props.quantity)*124 + " pints available"}</p>
       <p>
-        <button onClick={props.onClickSell}>Sell Pint</button>
+      {/* <div onClick = {() => props.onClickSell(props.id)}> 
+        <p>Sell Pint</p>
+      </div> */}
+
+        <button onClick={() => props.onClickSell(props.id)}>Sell Pint</button>
         </p>
       <hr/>
 
@@ -27,6 +30,7 @@ BeverageMenu.propTypes = {
   id: PropTypes.string,
   onSelectBeverage: PropTypes.func,
   onClick: PropTypes.func,
+  onClickSell: PropTypes.func
 };
 
 export default BeverageMenu;

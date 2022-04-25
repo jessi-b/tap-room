@@ -35,22 +35,19 @@ class BeverageControl extends React.Component {
       formDisplayed: false 
     });
   }
-  handleSelectingBeverage = (id) => { 
+  handleSelectBeverage = (id) => { 
     const selectedBeverage = this.state.beverageInventory.filter(beverage => beverage.id === id)[0];
     this.setState({
       selectedBeverage: selectedBeverage
     });
   }
-  handleSellPint = (beveragePintCount) => {
-    const updateBeverageInventory = this.state.beverageInventory
-      .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
-      .
+  handleSellPint = (quantity) => {
+    const updateBeverageInventory = this.state.updateBeverageInventory.filter(beverage => beverage.quantity)
     this.setState({
-      beverageInventory: updateBeverageInventory,
-      selectedBeverage: null
-    });
+      beverageInventory : updateBeverageInventory
+    })
   }
-  
+
   // render method
   render(){
     let currentlyDisplayedState = null;
@@ -64,7 +61,7 @@ class BeverageControl extends React.Component {
       currentlyDisplayedState = <CreateBeverage onCreateBeverage={this.handleCreateBeverage} />
       buttonText = "Return to Menu";
     } else {currentlyDisplayedState = <BeverageInventory beverageInventory={this.state.beverageInventory} 
-        onSelectBeverage={this.handleSelectingBeverage}
+        onSelectBeverage={this.handleSelectBeverage}
         onClickSell = {this.handleSellKeg}
       />;
       // <SellPint inventoryCount={this.state.inventoryCount} decreaseCount={(inventoryCount) => this.setState({inventoryCount})}/>
