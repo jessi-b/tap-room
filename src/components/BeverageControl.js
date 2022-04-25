@@ -70,13 +70,21 @@ class BeverageControl extends React.Component {
     });
   }
   handleSubtractPint = (beveragePintCount) => {
-    const updatePintCount = this.state.pndateQuantity
-    .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
-    .concat(beveragePintCount)
+    const updateBeverageInventory = this.state.beverageInventory
+      .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
+      .
     this.setState({
-      pintCount: updatePintCount,
+      beverageInventory: newBeverageInventory,
       selectedBeverage: null
     });
+
+    // const updatePintCount = this.state.pndateQuantity
+    // .filter(beverage => beverage.id !== this.state.selectedBeverage.id)
+    // .concat(beveragePintCount)
+    // this.setState({
+    //   pintCount: updatePintCount,
+    //   selectedBeverage: null
+    // });
   }
   handleAddKeg = (beverageKegCount) => {
     const updateKegCount = this.state.updateQuantity
