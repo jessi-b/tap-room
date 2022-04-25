@@ -14,7 +14,9 @@
   ![image](./plan.png)
 
   <p>
+
 ------------------------------
+
 ### <u>Table of Contents</u>
 * <a href="#-description">Description</a>
 * <a href="#-technologies-used">Technologies Used</a>
@@ -22,7 +24,9 @@
 * <a href="#-known-bugs">Known Bugs</a>
 * <a href="#-contact">Contact</a>
 * <a href="#-license">License</a>
+
 ------------------------------
+
 ### Description
 This React app allows a user to track kegs.
 
@@ -52,7 +56,7 @@ Copyright (c)  _Apr 2022_  _Jessi B_
 #
 ### Contact
 _If you run into any issues or have questions, ideas or concerns or wish to make a contribution to the code see contact information below._
-* Jessi B <jessb.dev@gmail.com>
+* Jessi B  <em><jessb.dev@gmail.com></em>
 ------------------------------
 <p align="center"><a href="#">Return to Top</a></p>
 
