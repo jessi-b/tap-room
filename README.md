@@ -3,16 +3,17 @@
   <br>
   <em>Epicodus - React - React Fundamentals - Code Review</em>
   <br>
-  ___________________________
   <br>
   <strong>Jessi B</strong>
   <br>
   <small>April 2022</small>
-</p>
+  <br>
+  ___________________________
+  <br>
 
+  ![image](./plan.png)
 
-![image](./plan.png)
-
+  <p>
 ------------------------------
 ### <u>Table of Contents</u>
 * <a href="#-description">Description</a>
@@ -23,7 +24,7 @@
 * <a href="#-license">License</a>
 ------------------------------
 ### Description
-This React app allows a user to track their kegs.
+This React app allows a user to track kegs.
 
 As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
 As a user, I want to submit a form to add a new keg to a list.
@@ -44,7 +45,7 @@ As a user, I want to be able to click a button next to a keg whenever I sell a p
 * Try Out This Web App: Enter `npm start` in the command line and navigte to _http://localhost:3000/_ in your browser
 #
 ### Known Bugs
-No known bugs.
+Sell pint functionality does not work.
 #
 ### License
 Copyright (c)  _Apr 2022_  _Jessi B_
@@ -53,7 +54,7 @@ Copyright (c)  _Apr 2022_  _Jessi B_
 _If you run into any issues or have questions, ideas or concerns or wish to make a contribution to the code see contact information below._
 * Jessi B <jessb.dev@gmail.com>
 ------------------------------
-<center><a href="#">Return to Top</a></center>
+<p align="center"><a href="#">Return to Top</a></p>
 
 ## Available Scripts
 
@@ -123,4 +124,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-<center><a href="#">Return to Top</a></center>
+<p align="center"><a href="#">Return to Top</a></p>
