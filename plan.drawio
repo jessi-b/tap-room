@@ -1,22 +1,22 @@
-<mxfile host="app.diagrams.net" modified="2022-04-25T05:21:51.552Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="pJ6D0aGbP8EOX-DLLscS" version="17.4.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-04-25T17:40:13.294Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="PFSfbaofb-oD0hSEAYeo" version="17.4.6" type="github">
   <diagram id="eGEJDaj6SYlvqcA72SZF" name="Page-1">
-    <mxGraphModel dx="433" dy="460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="477" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="y5f6hxjgZu6ScxN4eYrp-1" value="App" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="360.75" y="40" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="y5f6hxjgZu6ScxN4eYrp-2" value="Beverage Control&amp;nbsp;&lt;br&gt;(Class Component / Handles State)" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+        <mxCell id="y5f6hxjgZu6ScxN4eYrp-2" value="Keg Control&amp;nbsp;&lt;br&gt;(Class Component / Handles State)" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="305.75" y="100" width="215" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="y5f6hxjgZu6ScxN4eYrp-3" value="Beverage Inventory&lt;br&gt;(Holds list of bev objects)" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+        <mxCell id="y5f6hxjgZu6ScxN4eYrp-3" value="Keg Inventory&lt;br&gt;(Holds list of keg objects)" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="303.75" y="160" width="215" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="y5f6hxjgZu6ScxN4eYrp-5" value="Beverage Details&lt;br&gt;Displays beverage details" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+        <mxCell id="y5f6hxjgZu6ScxN4eYrp-5" value="Keg Details&lt;br&gt;Displays keg&#39;s details" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="547.5" y="160" width="162.5" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="y5f6hxjgZu6ScxN4eYrp-6" value="Beverage Menu&lt;br&gt;Displays list of beverages;&lt;br&gt;Clicking beverage displays that beverages details;&lt;br&gt;Can &quot;sell&quot;/subtract by the pint;" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+        <mxCell id="y5f6hxjgZu6ScxN4eYrp-6" value="Tap Menu&lt;br&gt;Displays list of kegs on tap;&lt;br&gt;Clicking tap displays that kegs details;&lt;br&gt;Can &quot;sell&quot; by the pint;" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="263.25" y="220" width="295" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5Ynr9P_wDF0KFYhToqWw-8" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="y5f6hxjgZu6ScxN4eYrp-3" target="y5f6hxjgZu6ScxN4eYrp-6" edge="1">
@@ -31,10 +31,10 @@
             <mxPoint x="410.75" y="100" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="0Xkvq-vCAsGb3F_Y85k6-5" value="Create Beverage" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+        <mxCell id="0Xkvq-vCAsGb3F_Y85k6-5" value="Create Keg" style="whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="180" y="160" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="0Xkvq-vCAsGb3F_Y85k6-6" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="0Xkvq-vCAsGb3F_Y85k6-5" target="y5f6hxjgZu6ScxN4eYrp-2" edge="1">
+        <mxCell id="0Xkvq-vCAsGb3F_Y85k6-6" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" parent="1" source="0Xkvq-vCAsGb3F_Y85k6-5" target="y5f6hxjgZu6ScxN4eYrp-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="420" y="360" as="sourcePoint" />
             <mxPoint x="580" y="360" as="targetPoint" />
