@@ -41,7 +41,7 @@ class KegControl extends React.Component {
     });
   }
   handleSellPint = (quantity) => {
-    const updateTapQuantity = this.state.kegList.filter(quantity => KegList.id.quantity === quantity * 124);
+    const updateTapQuantity = this.state.kegList.filter(quantity => KegList.id.quantity === quantity * 124)(-1);
     if (quantity -1 < 0) {
       return "This keg is empty"
     } else {
