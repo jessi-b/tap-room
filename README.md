@@ -9,7 +9,7 @@
   <br>
   <small>April 2022</small>
 </p>
-------------------------------
+
 
 ![image](./plan.png)
 
@@ -42,7 +42,6 @@ As a user, I want to be able to click a button next to a keg whenever I sell a p
 * Clone Repo: In your terminal, navigate to your desktop or other desired location and enter `git clone https://github.com/jessi-b/tap-room.git`
 * Add Required Packages: Navigate to the top level of the project directory called _tap-room_ & enter each of the 
 * Try Out This Web App: Enter `npm start` in the command line and navigte to _http://localhost:3000/_ in your browser
-```
 #
 ### Known Bugs
 No known bugs.
