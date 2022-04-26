@@ -3,14 +3,12 @@ import PropTypes from "prop-types";
 
 function SellPint(props){
   const {keg} = props;
-
-  function handleSellPintSubmission(event) {
+  function handleSellPint(event) {
     props.onSellPint({
-      quantity: event.target.quantity.value
+      quantity: event.target.quantity.value,
       id: keg.id
     });
   }
-
   return (
     <React.Fragment>
       formSubmissionHandler={handleSellPint} 
@@ -19,8 +17,8 @@ function SellPint(props){
 }
 
 SellPint.propTypes = {
-  ticket: PropTypes.object,
-  onUpdateTicket: PropTypes.func
+  tap: PropTypes.object,
+  onSellPint: PropTypes.func
 };
 
 export default SellPint;

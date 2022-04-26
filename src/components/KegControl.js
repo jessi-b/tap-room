@@ -2,6 +2,7 @@ import React from 'react';
 import KegList from './KegList';
 import KegDetails from './KegDetails';
 import CreateKeg from './CreateKeg';
+import SellPint from './SellPint';
 
 class KegControl extends React.Component {
   // constructor
@@ -68,7 +69,7 @@ class KegControl extends React.Component {
       currentlyDisplayedState = <CreateKeg onCreateKeg={this.handleCreateKeg} />
       buttonText = "Return to Menu";
     } else {currentlyDisplayedState = <KegList kegList={this.state.kegList} 
-        onSelectTap={this.handleSelectTap}
+        onSelectTap = {this.handleSelectTap}
         onClickSell = {this.handleSellPint}
       />
       buttonText = "Add Keg";
