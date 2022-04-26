@@ -5,7 +5,7 @@ function SellPint(props){
   const {keg} = props;
   function handleSellPint(event) {
     props.onSellPint({
-      quantity: event.target.quantity.value,
+      quantity: event.target.quantity.value - 1,
       id: keg.id
     });
   }
@@ -17,7 +17,7 @@ function SellPint(props){
 }
 
 SellPint.propTypes = {
-  tap: PropTypes.object,
+  keg: PropTypes.object,
   onSellPint: PropTypes.func
 };
 

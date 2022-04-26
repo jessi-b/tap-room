@@ -11,7 +11,8 @@ class KegControl extends React.Component {
     this.state = {
       kegList: [],
       formDisplayed: false,
-      selectedTap: null
+      selectedTap: null,
+      sellPint: false
     };
   }
 
@@ -41,18 +42,14 @@ class KegControl extends React.Component {
       selectedTap: selectedTap
     });
   }
-  handleSellPint = (selectedTap) => {
-    const updateKegList = this.state.kegList
-      .filter(tap => tap.id !== this.state.selectedTap.id)
-      .concat(selectedTap);
-    if (this.state.selectedTap.quantity -1 <= 0) {
-      return "This keg is empty"
-    } else {
-      this.state.selectedTap.quantity -= 1;
+  handleSellPint = (id) => {
+    const selectedTap = this.state.kegList.filter(keg => keg.id !== id)[0];
+    if (selectedTap.quantity > 0) {
+      selectedTap.quantity -=1;
     }
     this.setState({
-      selectedTap : selectedTap,
-      kegList : updateKegList
+      sellPint : true,
+      selectedTap : selectedTap
     })
   }
 
@@ -60,7 +57,12 @@ class KegControl extends React.Component {
   render(){
     let currentlyDisplayedState = null;
     let buttonText = null;
-    if (this.state.selectedTap != null) {
+    if (this.state.sellPint) {
+      currentlyDisplayedState = <SellPint 
+        tap = {this.state.selectedTap} 
+        onSellPint = {this.handleSellPint}
+      />
+    } else if (this.state.selectedTap != null) {
       currentlyDisplayedState = <KegDetails 
         tap = {this.state.selectedTap} 
       />
