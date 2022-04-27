@@ -3,10 +3,11 @@ import TapMenu from './TapMenu';
 import PropTypes from "prop-types";
 
 function KegList(props){
+  const {onSellPint} = props;
   return (
     <React.Fragment>
-      <hr/>
       {props.kegList.map((keg) =>
+      <React.Fragment>
         <TapMenu
           onSelectTap = {props.onSelectTap}
           name={keg.name}
@@ -16,6 +17,9 @@ function KegList(props){
           id={keg.id}
           key={keg.id}
         />
+        <button onClick = {() => onSellPint(keg.id)}> Sell Pint </button>
+        <hr/>
+        </React.Fragment>
       )}
     </React.Fragment>
   );
@@ -23,7 +27,8 @@ function KegList(props){
 
 KegList.propTypes = {
   kegList: PropTypes.array,
-  onSelectTap: PropTypes.func
+  onSelectTap: PropTypes.func,
+  onSellPint: PropTypes.func
 };
 
 export default KegList;
