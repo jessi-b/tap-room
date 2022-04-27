@@ -52,7 +52,7 @@ class KegControl extends React.Component {
     if (updateKeg.quantity - (1/124) < 0) {
       updateKeg.quantity = 0;
     } else {
-      updateKeg.quantity -= (1/124); // works til 115  or -9 pints 
+      updateKeg.quantity -= (1/124);
     }
     const updateKegList = this.state.kegList
       .filter(keg => keg.id !== id)

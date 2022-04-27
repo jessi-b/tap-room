@@ -15,9 +15,9 @@ function TapMenu(props){
 
 TapMenu.propTypes = {
   name: PropTypes.string,
-  price: PropTypes.string,
+  price: PropTypes.number,
   description: PropTypes.string,
-  quantity: PropTypes.string,
+  quantity: PropTypes.number,
   id: PropTypes.string,
   onSelectTap: PropTypes.func
 };
