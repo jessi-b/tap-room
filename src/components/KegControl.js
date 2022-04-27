@@ -41,20 +41,18 @@ class KegControl extends React.Component {
       selectedTap: selectedTap
     });
   }
-
   handleSellPintClick = () => {
     console.log("pint sold");
     this.setState({
       sellPint: true
     });
   }
-
   handleSellPint = (id) => {
     const updateKeg = this.state.kegList.filter(keg => keg.id === id)[0];
-    if ((updateKeg.quantity*124) - 1 < 0) {
+    if (updateKeg.quantity - (1/124) < 0) {
       updateKeg.quantity = 0;
     } else {
-      updateKeg.quantity -= 1;
+      updateKeg.quantity -= (1/124); // works til 115  or -9 pints 
     }
     const updateKegList = this.state.kegList
       .filter(keg => keg.id !== id)
@@ -80,7 +78,7 @@ class KegControl extends React.Component {
       buttonText = "Return to Menu";
     } else {
       currentlyDisplayedState = <KegList kegList={this.state.kegList} 
-      onSelectTap = {this.handleSelectTap}
+      onSelectKeg = {this.handleSelectTap}
       onSellPint = {this.handleSellPint}
       />
       buttonText = "Add Keg";
