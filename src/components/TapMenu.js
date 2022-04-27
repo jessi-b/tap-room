@@ -10,7 +10,7 @@ function TapMenu(props){
       </div>
       <p><em>{props.description}</em></p>
       <p>{(props.quantity)*124 + " pints available"}</p>
-      <button onClick={() => props.onClickSell(props.id)}>Sell Pint</button>
+      <button onClick={()=> onClickSell(keg.id)}>Sell Pint</button>
       <hr/>
     </React.Fragment>
   );
