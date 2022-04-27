@@ -6,7 +6,7 @@ function KegList(props){
   const {onSellPint} = props;
   return (
     <React.Fragment>
-      {props.kegList.map((keg) =>
+      {props.kegList.sort((a, b) => a.name.localeCompare(b.name)).map((keg) =>
       <React.Fragment>
         <TapMenu
           onSelectTap = {props.onSelectKeg}

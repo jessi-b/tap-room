@@ -49,7 +49,7 @@ As a user, I want to be able to click a button next to a keg whenever I sell a p
 * Try Out This Web App: Enter `npm start` in the command line and navigte to _http://localhost:3000/_ in your browser
 #
 ### Known Bugs
-Sell pint functionality does not work.
+Sell pint functionality does not stay with one keg.
 #
 ### License
 Copyright (c)  _Apr 2022_  _Jessi B_
