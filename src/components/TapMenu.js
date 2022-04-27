@@ -8,7 +8,7 @@ function TapMenu(props){
         <h3>{props.name}  {"$"+(props.price)}</h3>
       </div>
       <p><em>{props.description}</em></p>
-      <p>{(props.quantity)*124 + " pints available"}</p>
+      <p>{Math.round((props.quantity)*124) + " pints available"}</p>
     </React.Fragment>
   );
 }
